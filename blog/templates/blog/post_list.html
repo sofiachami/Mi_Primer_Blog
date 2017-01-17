@@ -5,9 +5,17 @@
         <body>
             <div>
                 <h1><a href="">Mi primer Blog</a></h1>
-            </div>
+		<div> 
+           	 </div>
 
-            <div>
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+		</div>
                 <p>published: 13.01.2017, 11:14</p>
                 <h2><a href="">Primer post</a></h2>
                 <p>Hola, a todo el mundo</p>
